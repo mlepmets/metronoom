@@ -14,16 +14,23 @@
 </template>
 
 <script>
-
+import { mapState } from 'vuex';
 export default {
   name: 'App',
 
   components: {
     
   },
+  methods: {
+    play() {
 
+    }
+  },
   data: () => ({
     //
   }),
+  computed: {
+    ...mapState(['playing, barLength, rhythm'])
+  }
 };
 </script>
