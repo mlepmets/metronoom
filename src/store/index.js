@@ -6,15 +6,15 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   data: {
     return() {
-      rhytms: {
-        [4,4,4,4]
-      }
+      // rhythms: {
+      //   [4,4,4,4]
+      // }
     }
   },
   state: {
     playing: false,
     barLength: 4,
-    rhythm: fourths
+    rhythm: 'fourths'
   },
   mutations: {
     SET_PLAYING(state, playingStatus) {
@@ -28,6 +28,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    setPlayingStatus({ commit }, playingStatus) {
+      commit('SET_PLAYING', playingStatus);
+    }
   },
   modules: {
   }
